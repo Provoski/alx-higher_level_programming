@@ -38,7 +38,11 @@ class Square:
         self.__position = value
 
     def area(self):
+        """"return the square of size"""
         return (self.__size * self.__size)
+
     def my_print(self):
         """it prints to stdout the square with character '#' """
+        for i in range(self.__size):
+            print("{}{}".format(self.__position[0]*" ",self.__size*"#"))
 
