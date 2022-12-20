@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """it defines a Square class base on 0-square.py"""
 class Square:
     """the Square class define a square with a private intance attribute called size"""
