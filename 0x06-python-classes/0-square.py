@@ -3,4 +3,4 @@
 it does nothing """
 class Square:
     pass
-
+square = Square()
