@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""the Square class is an empty class.        it does nothing"""
+"""the Square class is an empty class"""
 class Square:
-    """the Square class is an empty class.
-it does nothing"""
+    """it does nothing"""
     pass
-square = Square()
