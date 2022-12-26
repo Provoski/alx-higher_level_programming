@@ -11,15 +11,17 @@ def safe_print_list(my_list=[], x=0):
                 count += 1
                 if count == x:
                     print()
+            return count
         elif lenght == 0:
             for items in my_list:
                 print(items)
+            return count
         else:
             for items in my_list:
                 print(items, end="")
                 count += 1
                 if count == lenght:
                     print()
+            return count
     except IndexError:
         print("an  Error occurred")
-    return count
