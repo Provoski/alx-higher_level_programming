@@ -12,3 +12,5 @@ def print_matrix_integer(matrix=[[]]):
                 if count == row_len:
                     print(end="\n")
                     count = 0
+    else:
+        print()
