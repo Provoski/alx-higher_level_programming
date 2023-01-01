@@ -10,4 +10,3 @@ def square_matrix_simple(matrix=[]):
         for val in range(len(matrix[row])):
             _matrix[row][val] = _matrix[row][val]**2
     return _matrix
-
