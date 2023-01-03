@@ -1,0 +1,40 @@
+"4-print_square" module
+=======================
+This module contains one function
+
+Functions
+---------
+(1) print_square - This function print a square with '#' of lenght of size specified
+
+Using "print_square" Function
+-----------------------------
+To use this function, it has to be imported from "4-print_square" module.
+
+Importing "print_square":
+	>>> print_square = __import__('4-print_square').print_square
+
+Usage:
+	>>> print_square(5)
+	#####
+	#####
+	#####
+	#####
+	#####
+
+	>>> print_square(0)
+
+	>>> print_square(-2.4)
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+	>>> print_square("val")
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+	>>> print_square(-1)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
