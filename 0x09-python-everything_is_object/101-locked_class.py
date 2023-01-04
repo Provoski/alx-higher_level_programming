@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# module 101-locked_class has one class
+"""module 101-locked_class has one class"""
+
+
 class LockedClass:
     """has no class or object.
     It prevent the user from dynamically
