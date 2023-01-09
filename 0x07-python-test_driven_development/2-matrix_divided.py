@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+# 2-matrix_divided.py module supplies one function
 def matrix_divided(matrix, div):
     """return a matrix whose elements has been divided by div"""
+    
     data_types = (int, float)
     matrix_rows = len(matrix)
     rows_size = len(matrix[0])
@@ -20,4 +22,3 @@ def matrix_divided(matrix, div):
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             _matrix[row][val] = round(_matrix[row][val]/div, 2)
     return _matrix
-
