@@ -55,9 +55,9 @@ class Rectangle(Base):
         def width(self, width):
             """property setter for width"""
 
-            if isinstance(width, int) is not True:
+            if not width.isdigit():
                 raise TypeError("width must be an integer")
-            if width <= 0:
+            if int(width) <= 0:
                 raise ValueError("width must be > 0")
             else:
                 self.__width = width
