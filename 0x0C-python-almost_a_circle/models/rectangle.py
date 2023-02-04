@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 from models.base import Base
 
-""" rectagle.py module"""
+"""
+rectagle.py module. this model defines a Rectagle class
+which inherit from the base class.
+it alsonhave different methods and attributs.
+"""
 
 
 class Rectangle(Base):
@@ -11,6 +15,8 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """initiallizing class attributes"""
+
         if isinstance(width, int) is not True:
             raise TypeError("width must be an integer")
         if width < 0:
