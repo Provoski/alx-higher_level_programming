@@ -35,10 +35,10 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
         super(Rectangle, self).__init__(id)
 
         """
@@ -49,7 +49,7 @@ class Rectangle(Base):
         def width(self):
             """property getter for width"""
 
-            return self.width
+            return self.__width
 
         @width.setter
         def width(self, width):
@@ -66,7 +66,7 @@ class Rectangle(Base):
         def height(self):
             """property getter for height"""
 
-            return self.height
+            return self.___height
 
         @height.setter
         def height(self, height):
@@ -83,7 +83,7 @@ class Rectangle(Base):
         def x(self):
             """property getter for x"""
 
-            return self.x
+            return self.__x
 
         @x.setter
         def x(self, x):
@@ -100,7 +100,7 @@ class Rectangle(Base):
         def y(self):
             """property getter for y"""
 
-            return self.y
+            return self.__y
 
         @y.setter
         def y(self, y):
