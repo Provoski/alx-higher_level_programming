@@ -5,7 +5,10 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle class inheriting from Base class"""
+    """
+    Rectangle class. it  inheriting from Base class
+    which is the base class.
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         if isinstance(width, int) is not True:
@@ -102,6 +105,7 @@ class Rectangle(Base):
 
         def __str__(self):
             """ overriding default __str__ content"""
+            
             return "hello"
 
         def update(self, *args, **kwargs):
