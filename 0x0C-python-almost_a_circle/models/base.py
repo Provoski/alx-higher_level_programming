@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" base class model"""
+""" base model"""
+
 
 class Base:
     """ Base claas which serve as parent class for other classes"""
