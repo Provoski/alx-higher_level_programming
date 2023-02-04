@@ -40,6 +40,10 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super(Rectangle, self).__init__(id)
+
+        """
+        creating setters and getters for the
+        class atteibutes
         """
         @property
         def width(self):
@@ -108,7 +112,7 @@ class Rectangle(Base):
                 raise ValueError("y must be >= 0")
             else:
                 self.__y = y
-
+        """
         def area(self):
             
             method: area
