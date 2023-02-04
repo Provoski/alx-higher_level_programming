@@ -45,87 +45,89 @@ class Rectangle(Base):
         creating private setters and getters for the
         class atteibutes
         """
-        @property
-        def width(self):
-            """property getter for width"""
+    @property
+    def width(self):
+        """property getter for width"""
 
-            return self.__width
+        return self.__width
 
-        @width.setter
-        def width(self, value):
-            """property setter for width"""
+    @width.setter
+    def width(self, width):
+        """property setter for width"""
 
-            if not isinstance(value, int):
-                raise TypeError("width must be an integer")
-            if value < 1:
-                raise ValueError("width must be > 0") 
-            self.__width = value
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width < 1:
+            raise ValueError("width must be > 0") 
+        self.__width = value
 
-        @property
-        def height(self):
-            """property getter for height"""
+    @property
+    def height(self):
+        """property getter for height"""
 
-            return self.__height
+        return self.__height
 
-        @height.setter
-        def height(self, height):
-            """property setter for height"""
+    @height.setter
+    def height(self, height):
+        """property setter for height"""
 
-            if isinstance(height, int) is not True:
-                raise TypeError("height must be an integer")
-            if height <= 0:
-                raise ValueError("height must be > 0")
-            self.__height = height
+        if isinstance(height, int) is not True:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = height
 
-        @property
-        def x(self):
-            """property getter for x"""
+    @property
+    def x(self):
+        """property getter for x"""
 
-            return self.__x
+        return self.__x
 
-        @x.setter
-        def x(self, x):
-            """property setter for x"""
+    @x.setter
+    def x(self, x):
+        """property setter for x"""
 
-            if isinstance(x, int) is not True:
-                raise TypeError("x must be an integer")
-            if x < 0:
-                raise ValueError("x must be >= 0")
-            self.__x = x
+        if isinstance(x, int) is not True:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = x
 
-        @property
-        def y(self):
-            """property getter for y"""
+    @property
+    def y(self):
+        """property getter for y"""
 
-            return self.__y
+        return self.__y
 
-        @y.setter
-        def y(self, y):
-            """property setter for y"""
+    @y.setter
+    def y(self, y):
+        """property setter for y"""
 
-            if isinstance(y, int) is not True:
-                raise TypeError("y must be an integer")
-            if y < 0:
-                raise ValueError("y must be >= 0")
-            self.__y = y
+        if isinstance(y, int) is not True:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = y
 
-        def area(self):
-            """ 
-            method: area
-            use: returns the area value of a rectangle
-            logic: width * height
-            """
-            return self.__width*self.__height
+    def area(self):
 
-        def display(self):
-            """
-            method: display
-            use: prints in stdout the Rectangle instance
-            with the character #
-            """
+        """ 
+        method: area
+        use: returns the area value of a rectangle
+        logic: width * height
+        """
+        return self.__width*self.__height
 
-            for i in range(self.__height):
-                print("{}".format("#"*self.__width))
+    def display(self):
+
+        """
+        method: display
+        use: prints in stdout the Rectangle instance
+        with the character #
+        """
+
+        for i in range(self.__height):
+            print("{}".format("#"*self.__width))
         """
         def __str__(self):
             overriding default __str__ content
