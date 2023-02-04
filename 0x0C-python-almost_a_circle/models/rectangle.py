@@ -56,7 +56,7 @@ class Rectangle(Base):
             """property setter for width"""
 
             if not isinstance(value, int):
-                raise TypeError("width must be an integer"
+                raise TypeError("width must be an integer")
             self.__width = value
 
         @property
