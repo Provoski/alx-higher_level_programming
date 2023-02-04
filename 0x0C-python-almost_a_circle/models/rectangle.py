@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-from models.base import Base
-
 """
 rectagle.py module. this model defines a Rectagle class
 which inherit from the base class.
 it alsonhave different methods and attributs.
 """
 
+
+from models.base import Base
 
 class Rectangle(Base):
     """
@@ -115,6 +115,7 @@ class Rectangle(Base):
             use: returns the area value of a rectangle
             logic: width * height
             """
+
             return self.__width*self.__height
 
         def display(self):
