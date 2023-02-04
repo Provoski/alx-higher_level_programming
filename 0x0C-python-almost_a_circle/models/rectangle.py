@@ -40,7 +40,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super(Rectangle, self).__init__(id)
-
+"""
         @property
         def width(self):
             """property getter for width"""
@@ -160,7 +160,8 @@ class Rectangle(Base):
                 self.__height = args[2]
                 self.__x = args[3]
                 self.__y = args[4]
-
+                
+            """ mapping arguments to class attributes"""
             for key, value in kwargs.items():
                 if key == "id" and key is not None:
                     self.id = value
@@ -172,3 +173,4 @@ class Rectangle(Base):
                     self.x = value
                 if key == "y" and key is not None:
                     self.y = value
+"""
