@@ -35,14 +35,14 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super(Rectangle, self).__init__(id)
 
         """
-        creating setters and getters for the
+        creating private setters and getters for the
         class atteibutes
         """
         @property
@@ -88,6 +88,7 @@ class Rectangle(Base):
         @x.setter
         def x(self, x):
             """property setter for x"""
+
             if isinstance(x, int) is not True:
                 raise TypeError("x must be an integer")
             elif x < 0:
