@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" base class """
+""" base class model"""
 
 class Base:
+    """ Base claas which serve as parent class for other classes"""
     __nb_object = 0
 
     """Base class Constructor"""
