@@ -15,7 +15,9 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """initiallizing class attributes"""
+        """
+        initiallizing class attributes and validating
+        """
 
         if isinstance(width, int) is not True:
             raise TypeError("width must be an integer")
@@ -41,10 +43,14 @@ class Rectangle(Base):
 
         @property
         def width(self):
+            """property getter for width"""
+
             return self.__width
 
         @width.setter
         def width(self, width):
+            """property setter for width"""
+
             if isinstance(width, int) is not True:
                 raise TypeError("width must be an integer")
             elif width < 0:
@@ -54,10 +60,14 @@ class Rectangle(Base):
 
         @property
         def height(self):
+            """property getter for height"""
+
             return self.__height
 
         @height.setter
         def height(self, height):
+            """property setter for height"""
+
             if isinstance(height, int) is not True:
                 raise TypeError("height must be an integer")
             elif height < 0:
@@ -67,9 +77,13 @@ class Rectangle(Base):
 
         @property
         def x(self):
+            """property getter for x"""
+
             return self.__x
 
         @x.setter
+        """property setter for x"""
+
         def x(self, x):
             if isinstance(x, int) is not True:
                 raise TypeError("x must be an integer")
@@ -80,10 +94,14 @@ class Rectangle(Base):
 
         @property
         def y(self):
+            """property getter for y"""
+
             return self.__y
 
         @y.setter
         def y(self, y):
+            """property setter for y"""
+
             if isinstance(y, int) is not True:
                 raise TypeError("y must be an integer")
             elif y < 0:
