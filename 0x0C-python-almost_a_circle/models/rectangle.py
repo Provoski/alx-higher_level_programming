@@ -128,12 +128,14 @@ class Rectangle(Base):
 
         for i in range(self.__height):
             print("{}".format("#"*self.__width))
-        """
-        def __str__(self):
-            overriding default __str__ content
-            
-            return "hello"
 
+    def __str__(self):
+        """overriding default __str__ content"""
+
+        txt = "[Rectangle] ({}) {}/{} - {}/{}"
+        return (txt.format(self.id, self.__x, self.__y, self.__width, self.__height))
+
+        """
         def update(self, *args, **kwargs):
             method: public method - update
             use: assign an arguments to each attribute
