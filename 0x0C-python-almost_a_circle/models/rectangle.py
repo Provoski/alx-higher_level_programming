@@ -134,42 +134,42 @@ class Rectangle(Base):
 
         t = "[Rectangle] ({}) {}/{} - {}/{}"
         return t.format(self.id, self.__x, self.__y, self.__width, self.__hi)
-        """
-        def update(self, *args, **kwargs):
-            method: public method - update
-            use: assign an arguments to each attribute
-            class attribute
+    """
+    def update(self, *args, **kwargs):
+        method: public method - update
+        use: assign an arguments to each attribute
+        class attribute
 
-            if len(args) == 1:
-                self.id = args[0]
-            if len(args) == 2:
-                self.id = args[0]
-                self.__width = args[1]
-            if len(args) == 3:
-                self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-            if len(args) == 4:
-                self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-                self.__x = args[3]
-            if len(args) == 5:
-                self.id = args[0]
-                self.__width = args[1]
-                self.__height = args[2]
-                self.__x = args[3]
-                self.__y = args[4]
-                mapping arguments to class attributes
-            for key, value in kwargs.items():
-                if key == "id" and key is not None:
-                    self.id = value
-                if key == "width" and key is not None:
-                    self.width = value
-                if key == "height" and key is not None:
-                    self.height = value
-                if key == "x" and key is not None:
-                    self.x = value
-                if key == "y" and key is not None:
-                    self.y = value
-            """
+        if len(args) == 1:
+            self.id = args[0]
+        if len(args) == 2:
+            self.id = args[0]
+            self.__width = args[1]
+        if len(args) == 3:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+        if len(args) == 4:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+        if len(args) == 5:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+            mapping arguments to class attributes
+        for key, value in kwargs.items():
+            if key == "id" and key is not None:
+                self.id = value
+            if key == "width" and key is not None:
+                self.width = value
+            if key == "height" and key is not None:
+                self.height = value
+            if key == "x" and key is not None:
+                self.x = value
+            if key == "y" and key is not None:
+                self.y = value
+        """
