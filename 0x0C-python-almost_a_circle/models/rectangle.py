@@ -111,16 +111,18 @@ class Rectangle(Base):
         logic: width * height
         """
 
-        return self.__width*self.__hi
-    """
+        return self.__width*self.__height
+
     def display(self):
+        """
         method: display
         use: prints in stdout the Rectangle instance
         with the character
+        """
 
-        for i in range(self.__hi):
+        for i in range(self.__height):
             print("{}".format("#"*self.__width))
-
+    """
     def __str__(self):
         overriding default __str__ content
 
