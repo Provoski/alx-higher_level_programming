@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+from models.base import Base
+
 """
 rectagle.py module. this model defines a Rectagle class
 which inherit from the base class.
@@ -6,15 +8,13 @@ it alsonhave different methods and attributs.
 """
 
 
-from models.base import Base
-
 class Rectangle(Base):
     """
     Rectangle class. it  inheriting from Base class
     which is the base class.
     """
 
-    def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width, hi,  x=0, y=0, id=None):
         """
         initiallizing class attributes and validating
         """
@@ -23,9 +23,9 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
-        if isinstance(height, int) is not True:
+        if isinstance(hi, int) is not True:
             raise TypeError("height must be an integer")
-        if height <= 0:
+        if hi <= 0:
             raise ValueError("height must be > 0")
         if isinstance(x, int) is not True:
             raise TypeError("x must be an integer")
@@ -36,7 +36,7 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__width = width
-        self.__height = height
+        self.__hi = hi
         self.__x = x
         self.__y = y
         super(Rectangle, self).__init__(id)
@@ -58,24 +58,24 @@ class Rectangle(Base):
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 1:
-            raise ValueError("width must be > 0") 
-        self.__width = value
+            raise ValueError("width must be > 0")
+        self.__width = width
 
     @property
-    def height(self):
+    def hi(self):
         """property getter for height"""
 
-        return self.__height
+        return self.__hi
 
-    @height.setter
-    def height(self, height):
+    @hi.setter
+    def hi(self, hi):
         """property setter for height"""
 
-        if isinstance(height, int) is not True:
+        if isinstance(hi, int) is not True:
             raise TypeError("height must be an integer")
-        if height <= 0:
+        if hi <= 0:
             raise ValueError("height must be > 0")
-        self.__height = height
+        self.__hi = hi
 
     @property
     def x(self):
@@ -111,12 +111,12 @@ class Rectangle(Base):
 
     def area(self):
 
-        """ 
+        """
         method: area
         use: returns the area value of a rectangle
         logic: width * height
         """
-        return self.__width*self.__height
+        return self.__width*self.__hi
 
     def display(self):
 
@@ -126,15 +126,14 @@ class Rectangle(Base):
         with the character #
         """
 
-        for i in range(self.__height):
+        for i in range(self.__hi):
             print("{}".format("#"*self.__width))
 
     def __str__(self):
         """overriding default __str__ content"""
 
-        txt = "[Rectangle] ({}) {}/{} - {}/{}"
-        return (txt.format(self.id, self.__x, self.__y, self.__width, self.__height))
-
+        t = "[Rectangle] ({}) {}/{} - {}/{}"
+        return t.format(self.id, self.__x, self.__y, self.__width, self.__hi)
         """
         def update(self, *args, **kwargs):
             method: public method - update
@@ -161,9 +160,7 @@ class Rectangle(Base):
                 self.__height = args[2]
                 self.__x = args[3]
                 self.__y = args[4]
-                
-            
-            mapping arguments to class attributes
+                mapping arguments to class attributes
             for key, value in kwargs.items():
                 if key == "id" and key is not None:
                     self.id = value
