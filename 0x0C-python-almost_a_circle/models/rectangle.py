@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-from models.base import Base
-
 """
 rectagle.py module. this model defines a Rectagle class
 which inherit from the base class.
 it alsonhave different methods and attributs.
 """
+from models.base import Base
 
 
 class Rectangle(Base):
     """
     Rectangle class. it  inheriting from Base class
-    which is the base class.
+    which is the parent class.
     """
 
     def __init__(self, width, hi,  x=0, y=0, id=None):
@@ -41,10 +40,6 @@ class Rectangle(Base):
         self.__y = y
         super(Rectangle, self).__init__(id)
 
-        """
-        creating private setters and getters for the
-        class atteibutes
-        """
     @property
     def width(self):
         """property getter for width"""
@@ -108,27 +103,27 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
-
+    """
     def area(self):
 
-        """
+        
         method: area
         use: returns the area value of a rectangle
         logic: width * height
-        """
+        
         return self.__width*self.__hi
 
     def display(self):
 
-        """
+
         method: display
         use: prints in stdout the Rectangle instance
-        with the character #
-        """
+        with the character
+
 
         for i in range(self.__hi):
             print("{}".format("#"*self.__width))
-    """
+
     def __str__(self):
         overriding default __str__ content
 
