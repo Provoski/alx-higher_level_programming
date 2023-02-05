@@ -103,13 +103,13 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
-    """
+
     def area(self):
         method: area
         use: returns the area value of a rectangle
         logic: width * height
         return self.__width*self.__hi
-
+    """
     def display(self):
         method: display
         use: prints in stdout the Rectangle instance
