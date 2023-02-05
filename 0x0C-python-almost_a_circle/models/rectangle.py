@@ -13,7 +13,7 @@ class Rectangle(Base):
     which is the parent class.
     """
 
-    def __init__(self, width, hi,  x=0, y=0, id=None):
+    def __init__(self, width, height,  x=0, y=0, id=None):
         """
         initiallizing class attributes and validating
         """
@@ -22,9 +22,9 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
-        if isinstance(hi, int) is not True:
+        if isinstance(height, int) is not True:
             raise TypeError("height must be an integer")
-        if hi <= 0:
+        if height <= 0:
             raise ValueError("height must be > 0")
         if isinstance(x, int) is not True:
             raise TypeError("x must be an integer")
@@ -35,7 +35,7 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__width = width
-        self.__hi = hi
+        self.__hi = height
         self.__x = x
         self.__y = y
         super(Rectangle, self).__init__(id)
@@ -57,20 +57,20 @@ class Rectangle(Base):
         self.__width = width
 
     @property
-    def hi(self):
+    def height(self):
         """property getter for height"""
 
-        return self.__hi
+        return self.__height
 
-    @hi.setter
-    def hi(self, hi):
+    @height.setter
+    def height(self, height):
         """property setter for height"""
 
-        if isinstance(hi, int) is not True:
+        if isinstance(height, int) is not True:
             raise TypeError("height must be an integer")
-        if hi <= 0:
+        if height <= 0:
             raise ValueError("height must be > 0")
-        self.__hi = hi
+        self.__height = height
 
     @property
     def x(self):
