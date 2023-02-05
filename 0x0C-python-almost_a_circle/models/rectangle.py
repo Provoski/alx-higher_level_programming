@@ -129,11 +129,13 @@ class Rectangle(Base):
         t = "[Rectangle] ({}) {}/{} - {}/{}"
         o = t.format(self.id, self.__x, self.__y, self.__width, self.__height)
         return o
-    """
+
     def update(self, *args, **kwargs):
+        """
         method: public method - update
         use: assign an arguments to each attribute
         class attribute
+        """
 
         if len(args) == 1:
             self.id = args[0]
@@ -155,7 +157,8 @@ class Rectangle(Base):
             self.__height = args[2]
             self.__x = args[3]
             self.__y = args[4]
-            mapping arguments to class attributes
+        """
+        mapping arguments to class attributes
         for key, value in kwargs.items():
             if key == "id" and key is not None:
                 self.id = value
