@@ -159,15 +159,15 @@ class Rectangle(Base):
             self.__y = args[4]
         """
         mapping arguments to class attributes
-        for key, value in kwargs.items():
-            if key == "id" and key is not None:
-                self.id = value
-            if key == "width" and key is not None:
-                self.width = value
-            if key == "height" and key is not None:
-                self.height = value
-            if key == "x" and key is not None:
-                self.x = value
-            if key == "y" and key is not None:
-                self.y = value
         """
+        for key, value in kwargs.items():
+            if key == "id":
+                self.id = value
+            if key == "width":
+                self.width = value
+            if key == "height":
+                self.height = value
+            if key == "x":
+                self.x = value
+            if key == "y":
+                self.y = value
