@@ -1,0 +1,4 @@
+-- Write a script that deletes the database hbtn_0c_0 in your MySQL server.
+-- delete database from  MySQL server.
+
+DROP DATABASE hbtn_0c_0
