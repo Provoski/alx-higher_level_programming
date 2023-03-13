@@ -2,7 +2,7 @@
 from sys import argv
 
 
-if __name__  == "__main__":
+if __name__ == "__main__":
     args_no = len(argv)
     if args_no == 1:
         print("{} arguments.".format(0))
@@ -11,6 +11,5 @@ if __name__  == "__main__":
         print("{}: {}".format(1, argv[1]))
     else:
         print("{} arguments:".format(args_no - 1))
-        for i in range(1, args_no):                     print("{}: {}".format(i, argv[i]))
-
-	
+        for i in range(1, args_no):
+            print("{}: {}".format(i, argv[i]))
