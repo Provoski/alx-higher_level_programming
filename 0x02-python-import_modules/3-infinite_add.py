@@ -8,4 +8,4 @@ if __name__ == "__main__":
     add = int(add)
     for i in range(1, args_no):
         add = add + int(argv[i])
-        print("{0}".format(add))
+    print("{}".format(add))
