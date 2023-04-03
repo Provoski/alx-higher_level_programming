@@ -1,7 +1,19 @@
 # Title
 0x08. Python - More Classes and Objects
+## Table of Content
+[Title] (#title)
+[Introduction] (#introduction)
+[Project Resources] (#project-resources)
+[Learning objectives] (#learning-objectives)
+[Project Requirements] (#project-requirements)
 ## Introduction
-an ALX software Enguneering project to learn more on python classes and objects
+An ALX software Engineering project to learn more on python classes and objects
+## Project Resources
+[Object Oriented Programming] (https://intranet.alxswe.com/rltoken/M-MFweENpRdEfRto_Gzlvg)
+[Class and instance attribute] (https://intranet.alxswe.com/rltoken/SGQIevRxW6lTgr4jGDzXbw)
+[classmethods and staticmethods] (https://intranet.alxswe.com/rltoken/Ij1EnTg02gtIknOkNv4xGA)
+[Properties vs. Getters and Setters] (https://intranet.alxswe.com/rltoken/xjpk-jUNe0uGEzcNXbwIHQ)
+[str vs repr] (https://intranet.alxswe.com/rltoken/iu1ILT-t6FMuZvk7vRvfuQ)
 ## Learning objectives
 * Why Python programming is awesome
 * What is OOP
