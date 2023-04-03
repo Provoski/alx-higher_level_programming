@@ -1,4 +1,4 @@
-# Title <a name='title'></a>
+# Title
 0x08. Python - More Classes and Objects
 ## Table of Content
 * [Title](#title)
