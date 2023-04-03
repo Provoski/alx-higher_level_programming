@@ -1,5 +1,4 @@
-<a name='title'></a>
-# Title
+# Title <a name='title'></a>
 0x08. Python - More Classes and Objects
 ## Table of Content
 * [Title] (#title)
