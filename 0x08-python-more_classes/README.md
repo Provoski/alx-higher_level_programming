@@ -1,11 +1,12 @@
+<a name='title'></a>
 # Title
 0x08. Python - More Classes and Objects
 ## Table of Content
-[Title] (#title)
-[Introduction] (#introduction)
-[Project Resources] (#project-resources)
-[Learning objectives] (#learning-objectives)
-[Project Requirements] (#project-requirements)
+* [Title] (#title)
+* [Introduction] (#introduction)
+* [Project Resources] (#project-resources)
+* [Learning objectives] (#learning-objectives)
+* [Project Requirements] (#project-requirements)
 ## Introduction
 An ALX software Engineering project to learn more on python classes and objects
 ## Project Resources
