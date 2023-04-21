@@ -2,6 +2,8 @@
 """ base model"""
 
 import json
+import csv
+import turtle
 
 
 class Base:
@@ -99,3 +101,63 @@ class Base:
                 return instances
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Method: save_to_file_csv
+        Use: save csv to a file
+        """
+
+        obj_cls = cls.__name__
+        filename = obj_cls + ".csv"
+        with open(filename, "w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(list_objs)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Method: load_from_file
+        Use: load csv from a file
+        """
+
+        obj_cls = cls.__name__
+        filename = obj_cls + ".csv"
+        with open(filename, "r") as f:
+            reader = csv.reader(f)
+            header = []
+            header = next(reader)
+            rows = []
+            for row in reader:
+                rows.append(row)
+            return rows
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Method: draw
+        Use: draws shapes of all rectangle and square on screen
+        """
+
+        t = turtle.Turtle()
+        screen = turtle.Screen()
+        screen.setup(400, 300)
+        screen.bgcolor("white")
+        t.pencolor("red")
+        t.pensize(5)
+        t.speed(1)
+        t.shape("turtle")
+
+        """drawing rectangle"""
+        for rect in list_rectangles:
+            for side in rect:
+                t.forward(side)
+                t.right(90)
+
+        """drawing squares"""
+        for square in list_squares:
+            for side in square:
+                t.forward(side)
+                t.right(90)
+        screen.mainloop()
