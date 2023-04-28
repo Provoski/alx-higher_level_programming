@@ -3,11 +3,12 @@
 
 
 def is_same_class(obj, a_class):
-    """returns True if the object is exactly an
+    """
+    returns True if the object is exactly an
     instance of the specified class ; otherwise False.
     """
 
-    if getattr(a_class, obj) is False:
-        return False
-    if isinstance(obj, a_class):
+    if type(obj) is a_class:
         return True
+    else:
+        False

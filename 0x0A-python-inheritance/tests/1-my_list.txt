@@ -1,0 +1,19 @@
+"Mylist" class test module
+=====================
+This module contains one class
+
+- MyList -> inherite from list object
+
+Using "MyList" class
+----------------------------
+To use this class you import it from "1-my_list" module.
+
+Importing "MyList" class
+        >>> mylist = __import__('1-my_list').MyList
+
+Usage:
+	>>> list_obj = mylist([1, 4, 2])
+	>>> print(list_obj)
+	[1, 4, 2]
+     	>>> list_obj.print_sorted()
+	[1, 2, 4]
