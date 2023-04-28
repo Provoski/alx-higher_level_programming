@@ -3,6 +3,8 @@
 
 
 class MyList(list):
+    """ this class is a subclass of list objrct """
+
     def print_sorted(self):
         """return sorted list in ascending order"""
 
