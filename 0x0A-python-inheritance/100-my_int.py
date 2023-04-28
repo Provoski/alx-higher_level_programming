@@ -3,6 +3,8 @@
 
 
 class MyInt(int):
+    """ inverted == and != int class """
+
     def __eq__(self, other):
         """ inverting  equal to """
 
