@@ -14,7 +14,7 @@ if __name__ == '__main__':
     username = arguments[1]
     password = arguments[2]
     database = arguments[3]
-    state = arguments[4]
+    state_name = arguments[4]
     conn = MySQLdb.connect(
             host="localhost",
             port=3306, user=username,
@@ -23,8 +23,8 @@ if __name__ == '__main__':
             charset="utf8")
     cur = conn.cursor()
 
-    sql = "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC"
-    cur.execute(sql, (state,))
+    sql = "SELECT * FROM states WHERE name = %s"
+    cur.execute(sql, (state_name, ))
     query = cur.fetchall()
     for row in query:
         print(row)
