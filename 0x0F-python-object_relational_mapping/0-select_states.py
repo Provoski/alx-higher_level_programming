@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+"""select_state module"""
 import sys
 import MySQLdb
 """select_state module"""
 
 
 if __name__ == '__main__':
+    """select_state module"""
+
     arguments = sys.argv
     username = arguments[1]
     password = arguments[2]
