@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+"""filter_state module."""
 import sys
 import MySQLdb
 """
-filter_state module.
 this script list all states with the name starting
 with N from hbtn_0e_o_usa database.
 """
