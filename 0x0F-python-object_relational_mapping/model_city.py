@@ -1,11 +1,9 @@
 #!/usr/bin/python3
+"""model_state module"""
 import sys
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from model_state import Base
-"""
-model_state module
-"""
 
 
 class City(Base):

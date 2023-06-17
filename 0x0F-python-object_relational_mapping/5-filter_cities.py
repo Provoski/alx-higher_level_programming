@@ -1,14 +1,15 @@
 #!/usr/bin/python3
+"""4-citie_by_state module."""
 import sys
 import MySQLdb
-"""
-4-citie_by_state module.
-this script list all cities with the state they belong
-from hbtn_0e_4_usa database.
-"""
 
 
 if __name__ == '__main__':
+    """
+    this script list all cities with the state they belong
+    from hbtn_0e_4_usa database.
+    """
+
     arguments = sys.argv
     username = arguments[1]
     password = arguments[2]
@@ -39,5 +40,6 @@ if __name__ == '__main__':
                 print("{}".format(city), end=", ")
             else:
                 print("{}".format(city))
+
     cur.close()
     conn.close()
