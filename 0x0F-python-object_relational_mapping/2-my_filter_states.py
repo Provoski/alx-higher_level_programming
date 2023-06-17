@@ -23,8 +23,8 @@ if __name__ == '__main__':
             charset="utf8")
     cur = conn.cursor()
 
-    sql = "SELECT * FROM states WHERE name = %s"
-    cur.execute(sql, (state_name, ))
+    sql = "SELECT * FROM states WHERE name = '{}' ".format(state_name)
+    cur.execute(sql)
     query = cur.fetchall()
     for row in query:
         print(row)
