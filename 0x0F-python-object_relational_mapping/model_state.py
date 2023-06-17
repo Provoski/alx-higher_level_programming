@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import sys
+from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 """
@@ -11,6 +12,9 @@ Base = declarative_base()
 
 
 class State(Base):
+    """
+    creates states table with column; id and name
+    """
 
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
@@ -18,9 +22,11 @@ class State(Base):
 
 
 if __name__ == '__main__':
-    import sys
-    from sqlalchemy import create_engine
-    args = sys.argv
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db = sys.argv[3]
+
     conn = "mysql+mysqldb://{}:{}@localhost:3306/{}"
-    engine = create_engine(conn.format(args[1], args[2], args[3]))
+    engine = create_engine(conn.format(username, password, db))
+
     Base.metadata.create_all(engine)
