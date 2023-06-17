@@ -33,13 +33,16 @@ if __name__ == '__main__':
     query = cur.fetchall()
     listLenght = len(query)
     count = 0
-    for row in query:
-        count = count + 1
-        for city in row:
-            if count < listLenght:
-                print("{}".format(city), end=", ")
-            else:
-                print("{}".format(city))
+    if (query):
+        for row in query:
+            count = count + 1
+            for city in row:
+                if count < listLenght:
+                    print("{}".format(city), end=", ")
+                else:
+                    print("{}".format(city))
+    else:
+        print()
 
     cur.close()
     conn.close()
