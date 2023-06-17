@@ -21,11 +21,19 @@ if __name__ == '__main__':
             db=database,
             charset="utf8")
     cur = conn.cursor()
+    sql = '''
+            SELECT * FROM states WHERE name LIKE 'N%'
+            COLLATE utf8mb3_bin
+            ORDER BY id ASC
+        '''
 
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute(sql)
     query = cur.fetchall()
-    for row in query:
-        print(row)
+    if query:
+        for row in query:
+            print(row)
+    else:
+        print()
 
     cur.close()
     conn.close()

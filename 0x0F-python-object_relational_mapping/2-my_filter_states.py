@@ -23,12 +23,19 @@ if __name__ == '__main__':
             charset="utf8")
     cur = conn.cursor()
 
-    sql = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+    sql = '''
+        SELECT * FROM states WHERE name = '{}'
+        COLLATE utf8mb3_bin
+        ORDER BY id ASC
+        '''
     sql_format = sql.format(state_name)
     cur.execute(sql_format)
     query = cur.fetchall()
-    for row in query:
-        print(row)
+    if query:
+        for row in query:
+            print(row)
+    else:
+        print()
 
     cur.close()
     conn.close()
