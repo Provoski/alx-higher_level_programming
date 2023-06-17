@@ -1,20 +1,25 @@
 #!/usr/bin/python3
+"""14-model_city_fetch_by_state"""
 import sys
 from model_state import Base, State
 from model_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-"""14-model_city_fetch_by_state"""
 
 
 if __name__ == '__main__':
-    username = sys.argv[1]
-    password = sys.argv[2]
+    """
+    fetch cities and their corresponding State that
+    thye belog to
+    """
+
+    user = sys.argv[1]
+    pwd = sys.argv[2]
     db = sys.argv[3]
 
     conn = "mysql+mysqldb://{}:{}@localhost:3306/{}"
-    engine = create_engine(conn.format(username, password, db))
+    engine = create_engine(conn.format(user, pwd, db), pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
 
