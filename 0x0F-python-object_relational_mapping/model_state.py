@@ -11,6 +11,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """State class inheriting drop Base object"""
 
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
@@ -22,5 +23,6 @@ if __name__ == '__main__':
     from sqlalchemy import create_engine
     args = sys.argv
     conn = "mysql+mysqldb://{}:{}@localhost:3306/{}"
-    engine = create_engine(conn.format(args[1], args[2], args[3]))
+    p = (pool_pre_ping=True)
+    engine = create_engine(conn.format(args[1], args[2], args[3]), p)
     Base.metadata.create_all(engine)
