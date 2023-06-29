@@ -1,19 +1,33 @@
 #!/usr/bin/python3
+"""10-model_state_my_get"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
+
 if __name__ == '__main__':
+    """
+    fetch state where state name is
+    equal to passed state name argument
+    """
+
+    user = sys.argv[1]
+    pwd = sys.argv[2]
+    db = sys.argv[3]
+    state_name = sys.argv[4]
+
     conn = "mysql+mysqldb://{}:{}@localhost:3306/{}"
-    engine = create_engine(conn.format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    engine = create_engine(conn.format(user, pwd, db), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    """states = session.query(State).filter(State.name.like(f'{sys.argv[4]}')).order_by(State.id.asc().all()"""
-    rows = session.query(State).order_by(State.id.asc().count()
-    if rows == 0:
-        print("Not found")
+    S = State
+    qry = session.query(S)
+    states = qry.filter(S.name == state_name).order_by(S.id.asc()).first()
+
+    if states:
+        print("{}".format(states.id))
     else:
-        for state in states:
-            print("{}".format(state.name))
+        print("Not found")
+
     session.close()

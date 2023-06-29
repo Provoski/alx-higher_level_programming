@@ -1,14 +1,15 @@
 #!/usr/bin/python3
+"""4-citie_by_state module."""
 import sys
 import MySQLdb
-"""
-4-citie_by_state module.
-this script list all cities with the state they belong
-from hbtn_0e_4_usa database.
-"""
 
 
 if __name__ == '__main__':
+    """
+    this script list all cities with the state they belong
+    from hbtn_0e_4_usa database.
+    """
+
     arguments = sys.argv
     username = arguments[1]
     password = arguments[2]
@@ -32,12 +33,16 @@ if __name__ == '__main__':
     query = cur.fetchall()
     listLenght = len(query)
     count = 0
-    for row in query:
-        count = count + 1
-        for city in row:
-            if count < listLenght:
-                print("{}".format(city), end=", ")
-            else:
-                print("{}".format(city))
+    if (query):
+        for row in query:
+            count = count + 1
+            for city in row:
+                if count < listLenght:
+                    print("{}".format(city), end=", ")
+                else:
+                    print("{}".format(city))
+    else:
+        print()
+
     cur.close()
     conn.close()

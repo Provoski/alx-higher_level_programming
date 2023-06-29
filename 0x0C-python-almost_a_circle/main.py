@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-""" 10-main """
+""" 101-main """
+from models.base import Base
+from models.rectangle import Rectangle
 from models.square import Square
 
 if __name__ == "__main__":
 
-    s1 = Square(5)
-    print(s1)
-    print(s1.size)
-    s1.size = 10
-    print(s1)
+    list_rectangles = [Rectangle(100, 40), Rectangle(90, 110, 30, 10), Rectangle(20, 25, 110, 80)]
+    list_squares = [Square(35), Square(15, 70, 50), Square(80, 30, 70)]
 
-    try:
-        s1.size = "9"
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
+    Base.draw(list_rectangles, list_squares)
