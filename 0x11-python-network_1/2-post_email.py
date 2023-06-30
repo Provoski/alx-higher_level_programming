@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""2-post_email.py module"""
 import urllib.parse
 import urllib.request
 import sys
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
@@ -12,4 +14,4 @@ if __name__ == "__main__":
 
     with urllib.request.urlopen(req) as response:
         body = response.read().decode("utf-8")
-        print(body)
+    print(body)
