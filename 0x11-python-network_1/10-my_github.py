@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""4-hbtn_status.py module"""
+"""10-my_github.py module"""
 import requests
 import sys
 
@@ -9,8 +9,9 @@ if __name__ == "__main__":
     passw = sys.argv[2]
     url = "https://api.github.com/user"
     headers = {
-    'Accept': 'application/vnd.github.v3+json'
-    }
+            'Accept': 'application/vnd.github.v3+json',
+            'Authorization': f'Token {passw}'
+            }
     response = requests.get(url, headers=headers, auth=(user, passw))
     data = response.json()
     print("{}".format(data['id']))
