@@ -4,7 +4,7 @@ const request = require('request');
 function countCompletedTasks (apiUrl) {
   request.get(apiUrl, (error, response, body) => {
     if (error) {
-      console.error('Error fetching data:', error);
+      console.error(error);
     } else if (response.statusCode === 200) {
       const todos = JSON.parse(body);
       const usersCompletedTasks = {};
