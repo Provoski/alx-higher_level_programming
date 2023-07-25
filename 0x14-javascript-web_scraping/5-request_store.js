@@ -5,13 +5,11 @@ const fs = require('fs');
 function fetchAndStore (url, filePath) {
   request.get(url, (error, response, body) => {
     if (error) {
-      console.error('Error fetching data:', error);
+      console.error(error);
     } else {
       fs.writeFile(filePath, body, 'utf-8', (err) => {
         if (err) {
-          console.error('Error writing to file:', err);
-        } else {
-          console.log(`Contents of the webpage stored in ${filePath} successfully.`);
+          console.error(err);
         }
       });
     }
