@@ -5,14 +5,12 @@ function countMoviesWithCharacter (apiUrl) {
   request.get(apiUrl, (error, response, body) => {
     if (error) {
       console.error(error);
-    } else if (response.statusCode === 200) {
+    } else {
       const filmsData = JSON.parse(body).results;
       const wedgeMovies = filmsData.filter(movie => {
         return movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18/');
       });
       console.log(`${wedgeMovies.length}`);
-    } else {
-      console.error(`Failed to fetch movie data. Status code: ${response.statusCode}`);
     }
   });
 }
